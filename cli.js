@@ -21,42 +21,42 @@ program
 
 program
     .command('ls')
-    .description('List all the registries')
+    .description('所有的包源列表')
     .action(onList);
 
 program
     .command('current')
-    .description('Show current registry name')
+    .description('展示当前包源的名称')
     .action(showCurrent);
 
 program
     .command('use <registry>')
-    .description('Change registry to registry')
+    .description('使用这个包源切换当前包源')
     .action(onUse);
 
 program
     .command('add <registry> <url> [home]')
-    .description('Add one custom registry')
+    .description('增加一个包源')
     .action(onAdd);
 
 program
     .command('del <registry>')
-    .description('Delete one custom registry')
+    .description('删除一个包源')
     .action(onDel);
 
 program
     .command('home <registry> [browser]')
-    .description('Open the homepage of registry with optional browser')
+    .description('使用可选浏览器打开包源的首页')
     .action(onHome);
 
 program
     .command('test [registry]')
-    .description('Show response time for specific or all registries')
+    .description('显示一个或所有包源的响应时间')
     .action(onTest);
 
 program
     .command('help')
-    .description('Print this help')
+    .description('打印本包的帮助')
     .action(function () {
         program.outputHelp();
     });
@@ -69,7 +69,7 @@ if (process.argv.length === 2) {
     program.outputHelp();
 }
 
-/*//////////////// cmd methods /////////////////*/
+/*//////////////// cmd 方法 /////////////////*/
 
 function onList() {
     getCurrentRegistry(function(cur) {
@@ -111,13 +111,13 @@ function onUse(name) {
                 console.log('                        ');
                 var newR = npm.config.get('registry');
                 printMsg([
-                    '', '   Registry has been set to: ' + newR, ''
+                    '', '   包源已经设置为: ' + newR, ''
                 ]);
             })
         });
     } else {
         printMsg([
-            '', '   Not find registry: ' + name, ''
+            '', '   没有找到包源: ' + name, ''
         ]);
     }
 }
@@ -133,7 +133,7 @@ function onDel(name) {
         setCustomRegistry(customRegistries, function(err) {
             if (err) return exit(err);
             printMsg([
-                '', '    delete registry ' + name + ' success', ''
+                '', '    删除包源 ' + name + ' 成功', ''
             ]);
         });
     });
@@ -143,7 +143,7 @@ function onAdd(name, url, home) {
     var customRegistries = getCustomRegistry();
     if (customRegistries.hasOwnProperty(name)) return;
     var config = customRegistries[name] = {};
-    if (url[url.length - 1] !== '/') url += '/'; // ensure url end with /
+    if (url[url.length - 1] !== '/') url += '/'; // 确保url的结尾 /
     config.registry = url;
     if (home) {
         config.home = home;
@@ -151,7 +151,7 @@ function onAdd(name, url, home) {
     setCustomRegistry(customRegistries, function(err) {
         if (err) return exit(err);
         printMsg([
-            '', '    add registry ' + name + ' success', ''
+            '', '    添加包源 ' + name + ' 成功', ''
         ]);
     });
 }
@@ -207,10 +207,10 @@ function onTest(registry) {
 
 
 
-/*//////////////// helper methods /////////////////*/
+/*//////////////// helper 方法 /////////////////*/
 
 /*
- * get current registry
+ * 获取当前包源
  */
 function getCurrentRegistry(cbk) {
     npm.load(function(err, conf) {
@@ -232,7 +232,7 @@ function getAllRegistry() {
 }
 
 function printErr(err) {
-    console.error('an error occured: ' + err);
+    console.error('一个错误发生: ' + err);
 }
 
 function printMsg(infos) {
@@ -242,7 +242,7 @@ function printMsg(infos) {
 }
 
 /*
- * print message & exit
+ * 打印信息和退出
  */
 function exit(err) {
     printErr(err);

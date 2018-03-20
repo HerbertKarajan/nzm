@@ -48,8 +48,8 @@ Usage: ncm [options] [command]
     use <registry>               使用这个包源切换当前的包源
     add <registry> <url> [home]  添加一个包源
     del <registry>               删除一个包源
-    home <registry> [browser]    使用可选浏览器打开包源的首页。
-    test [registry]              显示一个或所有包源的响应时间。
+    home <registry> [browser]    使用可选浏览器打开包源的首页
+    test [registry]              显示一个或所有包源的响应时间
     help                         打印本项目的帮助
 
   Options:
