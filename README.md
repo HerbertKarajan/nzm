@@ -1,24 +1,23 @@
-# ncm -- NPM registry manager
+# ncm -- NPM 包源管理工具
 
 [![NPM version][npm-image]][npm-url]
 
-`ncm` can help you easy and fast switch between different npm registries,
-now include: `npm`, `cnpm`, `taobao`, `nj(nodejitsu)`, `rednpm`.
+`ncm` 可以帮助你容易的、快速的去切换不同的npm 包源,
+目前,收录的包源有: `npm`, `cnpm`, `taobao`, `nj(nodejitsu)`, `rednpm`.
 
-## How to configure yarn to use private registry ?
-just add .yarnrc in your project’s directory and write there:
+## 如何使用私有的包源去配置管理工具?
+在你的工程目录里添加一个 .yarnrc的文件，然后在里面写上:
 `registry “http://your.registry”`
+或者你把它配置到你的主目录的 .yarnrc里
 
-Or you can configure it in your HOME directory's .yarnrc
 
-
-## Install
+## 安装
 
 ```
 $ npm install -g ncm
 ```
 
-## Example
+## 例子
 ```
 $ ncm ls
 
@@ -38,28 +37,28 @@ $ ncm use cnpm  //switch registry to cnpm
 
 ```
 
-## Usage
+## 使用命令的用法
 
 ```
 Usage: ncm [options] [command]
 
   Commands:
 
-    ls                           List all the registries
-    use <registry>               Change registry to registry
-    add <registry> <url> [home]  Add one custom registry
-    del <registry>               Delete one custom registry
-    home <registry> [browser]    Open the homepage of registry with optional browser
-    test [registry]              Show the response time for one or all registries
-    help                         Print this help
+    ls                           包源列表
+    use <registry>               使用这个包源切换当前的包源
+    add <registry> <url> [home]  添加一个包源
+    del <registry>               删除一个包源
+    home <registry> [browser]    使用可选浏览器打开包源的首页。
+    test [registry]              显示一个或所有包源的响应时间。
+    help                         打印本项目的帮助
 
   Options:
 
-    -h, --help     output usage information
-    -V, --version  output the version number
+    -h, --help     输出用法信息
+    -V, --version  输出版本号
 ```
 
-## Registries
+## 包源列表
 
 * [npm](https://www.npmjs.org)
 * [cnpm](http://cnpmjs.org)
@@ -68,13 +67,13 @@ Usage: ncm [options] [command]
 * [rednpm](http://npm.mirror.cqupt.edu.cn)
 
 
-## Notice
+## 注意事项
 
-When you use an other registry, you can not use the `publish` command.
+当你使用一个其他的包源的时候，你不能使用 `publish` 命令.
 
 ## TODO
 
-* When publish proxy to npm official registry
+* 我写的这个包已经在npm官方包源上面了哟。
 
 ## LICENSE
 MIT
