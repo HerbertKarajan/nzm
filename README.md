@@ -1,8 +1,10 @@
-# ncm -- NPM 包源管理工具
+# swnpm -- NPM 包源管理工具
+
+## 请允许我吐槽一下，我本来想用 `ncm` 这个名字，但是npm官方包源里已经有这个名字了，然后我用了这个名字，多了一个字母，所以辛苦大家用的时候多敲一个字母了，请多多包涵哟。
 
 [![NPM version][npm-image]][npm-url]
 
-`ncm` 可以帮助你容易的、快速的去切换不同的npm 包源,
+`swnpm` 可以帮助你容易的、快速的去切换不同的npm 包源,
 目前,收录的包源有: `npm`, `cnpm`, `taobao`, `nj(nodejitsu)`, `rednpm`.
 
 ## 如何使用私有的包源去配置管理工具?
@@ -14,12 +16,12 @@
 ## 安装
 
 ```
-$ npm install -g ncm
+$ npm install -g swnpm
 ```
 
 ## 例子
 ```
-$ ncm ls
+$ swnpm ls
 
 * npm -----  https://registry.npmjs.org/
   cnpm ----  http://r.cnpmjs.org/
@@ -31,7 +33,7 @@ $ ncm ls
 ```
 
 ```
-$ ncm use cnpm  //switch registry to cnpm
+$ swnpm use cnpm  //switch registry to cnpm
 
     Registry has been set to: http://r.cnpmjs.org/
 
@@ -40,7 +42,7 @@ $ ncm use cnpm  //switch registry to cnpm
 ## 使用命令的用法
 
 ```
-Usage: ncm [options] [command]
+Usage: swnpm [options] [command]
 
   Commands:
 

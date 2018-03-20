@@ -1,25 +1,25 @@
 {
-  "name": "ncm",
+  "name": "swnpm",
   "version": "1.0.0",
   "description": "NPM registry manager can help you easy and fast switch between different npm registries, now include: cnpm, taobao, nj(nodejitsu), rednpm, edunpm",
   "bin": "./cli.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/Pana/nrm.git"
+    "url": "https://github.com/HerbertKarajan/swnpm.git"
   },
   "scripts": {
-    "star": "npm star ncm"
+    "star": "npm star swnpm"
   },
   "keywords": [
     "NPM",
     "registry"
   ],
-  "author": "Pana",
+  "author": "Karajan",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Pana/nrm/issues"
+    "url": "https://github.com/HerbertKarajan/swnpm/issues"
   },
-  "homepage": "https://github.com/Pana/nrm",
+  "homepage": "https://github.com/HerbertKarajan/swnpm",
   "dependencies": {
     "async": "^1.5.2",
     "commander": "^2.9.0",
