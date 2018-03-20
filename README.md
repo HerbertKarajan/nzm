@@ -1,5 +1,4 @@
-ncm -- NPM registry manager
-===
+# ncm -- NPM registry manager
 
 [![NPM version][npm-image]][npm-url]
 
