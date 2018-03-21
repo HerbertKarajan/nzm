@@ -1,14 +1,14 @@
 {
-  "name": "swnpm",
+  "name": "nzm",
   "version": "1.0.0",
   "description": "NPM registry manager can help you easy and fast switch between different npm registries, now include: cnpm, taobao, nj(nodejitsu), rednpm, edunpm",
   "bin": "./cli.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/HerbertKarajan/swnpm.git"
+    "url": "https://github.com/HerbertKarajan/nzm.git"
   },
   "scripts": {
-    "star": "npm star swnpm"
+    "star": "npm star nzm"
   },
   "keywords": [
     "NPM",
@@ -17,9 +17,9 @@
   "author": "Karajan",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/HerbertKarajan/swnpm/issues"
+    "url": "https://github.com/HerbertKarajan/nzm/issues"
   },
-  "homepage": "https://github.com/HerbertKarajan/swnpm",
+  "homepage": "https://github.com/HerbertKarajan/nzm",
   "dependencies": {
     "async": "^1.5.2",
     "commander": "^2.9.0",

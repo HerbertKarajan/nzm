@@ -13,7 +13,7 @@ var only = require('only');
 
 var registries = require('./registries.json');
 var PKG = require('./package.json');
-var NCMRC = path.join(process.env.HOME, '.ncmrc');
+var NZMRC = path.join(process.env.HOME, '.nzmrc');
 
 
 program
@@ -220,11 +220,11 @@ function getCurrentRegistry(cbk) {
 }
 
 function getCustomRegistry() {
-    return fs.existsSync(NCMRC) ? ini.parse(fs.readFileSync(NCMRC, 'utf-8')) : {};
+    return fs.existsSync(NZMRC) ? ini.parse(fs.readFileSync(NZMRC, 'utf-8')) : {};
 }
 
 function setCustomRegistry(config, cbk) {
-    echo(ini.stringify(config), '>', NCMRC, cbk);
+    echo(ini.stringify(config), '>', NZMRC, cbk);
 }
 
 function getAllRegistry() {
