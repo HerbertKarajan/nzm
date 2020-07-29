@@ -27,4 +27,8 @@
         "home": "http://www.enpmjs.org",
         "registry": "http://registry.enpmjs.org/"
     }
+    "yarn": {
+        "home": "https://registry.yarnpkg.com",
+        "registry": "https://registry.yarnpkg.com"
+    }
 }
