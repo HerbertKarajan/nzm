@@ -64,7 +64,7 @@ Usage: nzm [options] [command]
 * [nodejitsu](https://www.nodejitsu.com)
 * [taobao](http://npm.taobao.org/)
 * [rednpm](http://npm.mirror.cqupt.edu.cn)
-
+* [yarn](https://registry.yarnpkg.com)
 
 ## 注意事项
 
