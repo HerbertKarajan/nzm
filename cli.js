@@ -1,4 +1,9 @@
 #!/usr/bin/env node
+/**
+ * @description: 包源管理工具
+ * @author:Karajan
+ * 
+ */
 var path = require('path');
 var fs = require('fs');
 var program = require('commander');
